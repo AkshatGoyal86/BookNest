@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <%- include('./common/header.ejs') %>
+
+        <%- include('./common/banner.ejs') %>
+
+
+        <div class="container mt-5">
+            <div class="row">
+
+                <div class="col-md-5 col-sm-5">
+                    <h1 class="contact-h">Contact Info</h1>
+                    <p class="contact-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit rem hic fuga sint tempore quae illum sit aliquam minus distinctio adipisci, cupiditate quam quod non amet, dolor iste reiciendis incidunt!</p>
+                    <table>
+                        <tr>
+                            <td class="table-heading">Address:</td>
+                            <td class="table-body">826 BoolNest Extension Apt. 356, Delhi, India</td>
+                        </tr>
+                        <tr>
+                            <td class="table-heading">Phone:</td>
+                            <td class="table-body">+91 9514308005</td>
+                        </tr>
+                        <tr>
+                            <td class="table-heading">Email:</td>
+                            <td class="table-body">info@booknest.com</td>
+                        </tr>
+                        <tr>
+                            <td class="table-heading">Fax:</td>
+                            <td class="table-body">+(12) 345 67890</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-md-7 col-sm-7 contact">
+                    <form method="post" action="/contact-us">
+                        <input type="text" name="firstname" placeholder="Your Firstname" required>
+                        <input type="text" name="lastname" placeholder="Your Lastname" required>
+                        <input type="number" name="number" placeholder="Your Mobile No." required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" cols="82" rows="8" placeholder="Your Message" required></textarea>
+                        <input type="submit" name="submit" value="SUBMIT NOW" class="btn btn-outline-success">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.3920249626026!2d77.06886107472485!3d28.588013975689048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b3d9973d433%3A0x43ef58e17266904f!2sVSIT.in%20-%20The%20Coding%20Institute%20in%20Delhi%2C%20Dwarka!5e0!3m2!1sen!2sin!4v1710740643753!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+        <%- include('./common/footer.ejs') %>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <%- include('header.ejs') %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+            <%- include('leftmenu.ejs') %>
+            </div>
+
+            <div class="col-10">
+
+                <form method="post" action="/addproduct" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="fourimage1" class="form-label">hotel room image</label>
+                        <input type="file" name="fourimage1" class="form-control" id="fourimage1">
+                    </div><div class="mb-3">
+                        <label for="fourimage2" class="form-label">hotel name</label>
+                        <input type="text" name="fourimage2" class="form-control" id="fourimage2">
+                    </div><div class="mb-3">
+                        <label for="fourimage3" class="form-label">room category</label>
+                        <input type="text" name="fourimage3" class="form-control" id="fourimage3">
+                    </div><div class="mb-3">
+                        <label for="fourimage4" class="form-label">room price</label>
+                        <input type="text" name="fourimage4" class="form-control" id="fourimage4">
+                    </div>
+                    <input type="submit" class="btn btn-primary">
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

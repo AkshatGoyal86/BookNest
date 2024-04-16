@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <%- include('header.ejs') %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+            <%- include('leftmenu.ejs') %>
+            </div>
+
+            <div class="col-10">
+
+                <% if(regdata.length>0){ %>
+                    <table class="table table-bordered table-sm">
+                        <thead>
+                            <tr>
+                                <th>image</th>
+                                <th>hotel name</th>
+                                <th>room category</th>
+                                <th>room price</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody>
+                            <% for(var i=0; i<regdata.length; i++){%>
+                            <tr>
+                                <td>
+                                    <img src="/<%= regdata[i].fourimage1 %>" height="40" width="40">
+                                </td>
+                                <td>
+                                    <%= regdata[i].fourimage2 %>
+                                </td>
+                                <td>
+                                    <%= regdata[i].fourimage3 %>
+                                </td>
+                                <td>
+                                    <%= regdata[i].fourimage4 %>
+                                </td>
+                                <td><a class="btn btn-outline-primary" href="/update_products/<%= regdata[i].id %>">Update</a>
+                                <a class="btn btn-outline-primary" href="/delete-1/<%= regdata[i].id %>">Delete</a></td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                    <% } else { %>
+                        No Record Found
+                    <%} %>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

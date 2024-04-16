@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <%- include('./common/header.ejs') %>
+
+        <%- include('./common/banner.ejs') %>
+
+        <div class="container mt-5">
+            <div class="row">
+
+                <div class="col-md-7 aboutus-part1">
+                    <h1>Welcome To BookNest</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit expedita amet corporis at eaque aut accusamus, non, laudantium officiis recusandae deserunt corrupti fugiat, cupiditate veritatis Rerum voluptate architecto quos.</p>
+                </div>
+
+                <div class="col-md-5 aboutus-part2">
+                    <ul>
+                        <li><img src="asserts/images/check.png"> 20% Off On Accommodation</li>
+                        <li><img src="asserts/images/check.png"> Complimentary Daily Breakfast</li>
+                        <li><img src="asserts/images/check.png"> 3 Pcs Laundry Per Day</li>
+                        <li><img src="asserts/images/check.png"> Free Wifi</li>
+                        <li><img src="asserts/images/check.png"> Discount 20% On F&B</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <h4 class="gallery-font">OUR GALLERY</h4>
+        <h1 class="gallery-text">Discover Our Work</h1>
+
+        <div class="container">
+            <div class="row gallery-curve-border">
+
+                <div class="col-6"><img src="./asserts/images/room-b1.jpg" width="100%" height="300px">
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <img src="./asserts/images/room-b2.jpg" width="100%" height="277px">
+                        </div>
+                        <div class="col-6">
+                            <img src="./asserts/images/room-b3.jpg" width="100%" height="277px">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6"><img src="./asserts/images/room-b4.jpg" width="100%" height="600px"></div>
+
+            </div>
+        </div>
+
+
+        <%- include('./common/footer.ejs') %>
+    </div>
+    
+</body>
+</html>

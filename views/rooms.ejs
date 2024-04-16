@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Rooms</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <%- include('./common/header.ejs') %>
+
+        <%- include('./common/banner.ejs') %>
+
+        <div class="container mt-5">
+            <h1 class="rooms text-start">Double Rooms</h1>
+            <div class="row gx-3 four-img">
+                <% if(regdata.length>0){ %>
+                    <% for(var i=0; i<regdata.length; i++){%>
+                <div class="col-3">
+                    <img src="/<%= regdata[i].fourimage1 %>">
+                    <h6><%= regdata[i].fourimage2 %></h6>
+                    <h6><%= regdata[i].fourimage3 %></h6>
+                    <h6><%= regdata[i].fourimage4 %></h6>
+                    <a href="/productdetails/<%= regdata[i].id %>" class="btn btn-outline-primary">Read More</a>
+                </div>
+                <% } %>  
+                <% } else { %>
+                    No Record Found
+                <%} %>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <h1 class="rooms text-start">Premium King Rooms</h1>
+            <div class="row gx-3 four-img">
+                <% if(regdata.length>0){ %>
+                    <% for(var i=0; i<regdata.length; i++){%>
+                <div class="col-3">
+                    <img src="/<%= regdata[i].fourimage1 %>">
+                    <h6><%= regdata[i].fourimage2 %></h6>
+                    <h6><%= regdata[i].fourimage3 %></h6>
+                    <h6><%= regdata[i].fourimage4 %></h6>
+                    <a href="/productdetails/<%= regdata[i].id %>" class="btn btn-outline-primary">Read More</a>
+                </div>
+                <% } %>  
+                <% } else { %>
+                    No Record Found
+                <%} %>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <h1 class="rooms text-start">Deluxe Rooms</h1>
+            <div class="row gx-3 four-img">
+                <% if(regdata.length>0){ %>
+                    <% for(var i=0; i<regdata.length; i++){%>
+                <div class="col-3">
+                    <img src="/<%= regdata[i].fourimage1 %>">
+                    <h6><%= regdata[i].fourimage2 %></h6>
+                    <h6><%= regdata[i].fourimage3 %></h6>
+                    <h6><%= regdata[i].fourimage4 %></h6>
+                    <a href="/productdetails/<%= regdata[i].id %>" class="btn btn-outline-primary">Read More</a>
+                </div>
+                <% } %>  
+                <% } else { %>
+                    No Record Found
+                <%} %>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <h1 class="rooms text-start">Family Rooms</h1>
+            <div class="row gx-3 four-img">
+                <% if(regdata.length>0){ %>
+                    <% for(var i=0; i<regdata.length; i++){%>
+                <div class="col-3">
+                    <img src="/<%= regdata[i].fourimage1 %>">
+                    <h6><%= regdata[i].fourimage2 %></h6>
+                    <h6><%= regdata[i].fourimage3 %></h6>
+                    <h6><%= regdata[i].fourimage4 %></h6>
+                    <a href="/productdetails/<%= regdata[i].id %>" class="btn btn-outline-primary">Read More</a>
+                </div>
+                <% } %>  
+                <% } else { %>
+                    No Record Found
+                <%} %>
+            </div>
+        </div>
+
+
+        <%- include('./common/footer.ejs') %>
+    </div>
+    
+</body>
+</html>

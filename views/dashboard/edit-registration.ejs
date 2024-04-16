@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <%- include('header.ejs') %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+            <%- include('leftmenu.ejs') %>
+            </div>
+
+            <div class="col-10">
+
+                <form method="post">
+                    <div class="hello mt-4">
+                        <h6>Full Name</h6>
+                        <input type="text" name="name" value="<%= regdata.name %>" size="53px" placeholder="Enter Full Name" required>
+                    </div>
+                
+                    <div class="hello mt-5">
+                        <h6>Email Address</h6>
+                        <input type="emial" name="email" value="<%= regdata.email %>" size="53px" placeholder="Enter Email Address" required>
+                    </div>
+                
+                    <div class="hello mt-5">
+                        <h6>Password</h6>
+                        <input type="password" name="password" value="<%= regdata.password %>" size="53px" placeholder="Enter Password" required>
+                    </div>
+                
+                    <div class="hello mt-5">
+                        <h6>Comfirm Password</h6>
+                        <input type="password" name="confirm_password" value="<%= regdata.confirm_password %>" size="53px" placeholder="Comfirm Password" required>
+                    </div>
+                
+                    <div class="world mt-5">
+                        <input type="submit" class="btn btn-primary" value="Update">
+                    </div>
+                </form>
+                
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

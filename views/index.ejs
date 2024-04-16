@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest</title>
+    <link rel="website icon" href="../asserts/images/website-icon.png">
+</head>
+<body>
+
+    <div class="container-fluid banner" style="background-image: url(asserts/images/banner-1.webp); background-size: cover; width: 100%; height: 650px;">
+        <div class="row">
+
+            <div class="col-6">
+
+            </div>
+
+            <div class="col-6">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <%- include('./common/header.ejs') %>
+    </div>
+
+
+    <div class="container">
+        <div class="row about-part">
+            <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
+                <div class="about-part1">
+                    <img src="./asserts/images/dining-img.webp">
+                    <img src="./asserts/images/dining-img.webp" style="padding-top: 42px;">
+                </div>
+            
+                <div class="about-part2">
+                    <img src="./asserts/images/dining-img.webp">
+                    <img src="./asserts/images/dining-img2.webp">
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-5 dining-caption">
+                <span>About Our Company</span>
+                <h2>Make the customer the hero of our story</h2>
+                <h5>Lorem ipsum dolor sit amet, consectetur adipisic- ing elit, sed do eiusmod tempor inc.</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud.</p>
+                <button class="btn btn-outline-success">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="rooms">Our Rooms</h1>
+
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-3">
+                <div class="card text-white">
+                    <img src="./asserts/images/room-b1.jpg" class="card-img">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Double Room</h4>
+                        <p class="card-text"><span>199$</span>/Pernight</p>
+                        <a class="btn btn-primary" href="#">read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-white">
+                    <img src="./asserts/images/room-b2.jpg" class="card-img">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Premium King Room</h4>
+                        <p class="card-text"><span>159$</span>/Pernight</p>
+                        <a class="btn btn-primary" href="#">read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-white">
+                    <img src="./asserts/images/room-b3.jpg" class="card-img">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Deluxe Room</h4>
+                        <p class="card-text"><span>198$</span>/Pernight</p>
+                        <a class="btn btn-primary" href="#">read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card text-white">
+                    <img src="./asserts/images/room-b4.jpg" class="card-img">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Family Room</h4>
+                        <p class="card-text"><span>299$</span>/Pernight</p>
+                        <a class="btn btn-primary" href="#">read more</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row dining">
+            <div class="col-md-7 col-lg-7 col-xl-7 mx-auto mt-3">
+                <img src="./asserts/images/dining-img.webp">
+            </div>
+            <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mt-5 dining-caption">
+                <span>OUR RESTURENT</span>
+                <h2>Dining & Drinks</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud.</p>
+                <button class="btn btn-outline-success">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row dining">
+            <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mt-5 dining-caption">
+                <span>OUR POOL</span>
+                <h2>Swimming Pool</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud.</p>
+                <button class="btn btn-outline-success">Learn More</button>
+            </div>
+            <div class="col-md-7 col-lg-7 col-xl-7 mx-auto mt-3">
+                <img src="./asserts/images/dining-img2.webp">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt-5">
+        <div class="row testimonial-main">
+
+            <div class="col">
+                <div id="mycarousel1" class="carousel slide" data-bs-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-bs-target="#mycarousel1" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#mycarousel1" data-bs-slide-to="1"></li>
+                    </ul>
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active testimonial" data-bs-interval="2000">
+                            <div class="carousel-caption">
+                                <img src="./asserts/images/testimonial.jpg">
+                                <h2>Yorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</h2>
+                                <div class="rating"><img src="./asserts/images/star.png"><img src="./asserts/images/star.png"><img src="./asserts/images/star.png"><img src="./asserts/images/star.png"><img src="./asserts/images/star.png"></div>
+                                <h4>CLIFFORD FRAZIER, <span>Regular Client</span></h4>
+                            </div>
+                        </div>
+                        <div class="carousel-item testimonial" data-bs-interval="2000">
+                            <div class="carousel-caption">
+                                <img src="./asserts/images/testimonial.jpg">
+                                <h2>Yorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</h2>
+                                <div class="rating"><img src="./asserts/images/star.png"><img src="./asserts/images/star.png"><img src="./asserts/images/star.png"><img src="./asserts/images/star.png"><img src="./asserts/images/star.png"></div>
+                                <h4>CLIFFORD FRAZIER, <span>Regular Client</span></h4>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#mycarousel1" class="carousel-control-prev" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-success"></span>
+                    </a>
+
+                    <a href="#mycarousel1" class="carousel-control-next" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-success"></span>
+                    </a>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div class="container-fluid">
+        <div class="row gx-0 four-img">
+            <div class="col-md-3 col-sm-12">
+                <img src="./asserts/images/room-b1.jpg">
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <img src="./asserts/images/room-b2.jpg">
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <img src="./asserts/images/room-b3.jpg">
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <img src="./asserts/images/room-b4.jpg">
+            </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <%- include('./common/footer.ejs') %>
+    </div>
+    
+</body>
+</html>

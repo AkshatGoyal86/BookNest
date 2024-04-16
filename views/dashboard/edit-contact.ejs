@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <%- include('header.ejs') %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+            <%- include('leftmenu.ejs') %>
+            </div>
+
+            <div class="col-10">
+
+                <!-- <form method="post">
+                    <div class="mb-3">
+                        <label for="brand-name" class="form-label">Brand Name</label>
+                        <input type="text" name="brand_name" value="<%= regdata.brand_name %>" class="form-control" id="brand-name" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="product-name" class="form-label">Product Name</label>
+                        <input type="text" name="product_name" value="<%= regdata.product_name %>" class="form-control" id="product-name">
+                      </div>
+                    <input type="submit" class="btn btn-primary" value="Update">
+                </form> -->
+
+                <form method="post">
+                    <input type="text" name="firstname" value="<%= regdata.firstname %>" placeholder="Your Firstname" required>
+                    <input type="text" name="lastname" value="<%= regdata.lastname %>" placeholder="Your Lastname" required>
+                    <input type="number" name="number" value="<%= regdata.number %>" placeholder="Your Mobile No." required>
+                    <input type="email" name="email" value="<%= regdata.email %>" placeholder="Your Email" required>
+                    <textarea name="message" cols="82" rows="8" value="<%= regdata.message %>" placeholder="Your Message" required></textarea>
+                    <input type="submit" class="btn btn-primary" value="Update">
+                </form>
+                
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

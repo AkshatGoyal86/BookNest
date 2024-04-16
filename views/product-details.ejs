@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <%- include('./common/header.ejs') %>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="/<%= regdata.fourimage1 %>" height="550px" width="100%">
+            </div>
+
+            <div class="col-md-7">
+                <h1><%= regdata.fourimage2 %></h1>
+                <h2><%= regdata.fourimage3 %></h2>
+                <h3><%= regdata.fourimage4 %></h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <%- include('./common/footer.ejs') %>
+    </div>
+
+</body>
+</html>
