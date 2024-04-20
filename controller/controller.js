@@ -8,7 +8,24 @@ const addproduct = require('../model/add-product'); // importing add-product.js 
 const registerSchema = require('../model/sign-up'); // importing sign-up.js to our file
 
 const multer = require('multer'); // importing multer
-const { v4: uuidv4 } = require('uuid') // importing uuid
+const { v4: uuidv4 } = require('uuid'); // importing uuid
+
+const session = require('express-session'); // importing express-session
+const cookieParser = require('cookie-parser'); // importing cookie-parser
+
+
+router.use(cookieParser());
+router.use(
+    session({
+        key: "user_sid",
+        secret: "somerandomstuffs",
+        resave: false,
+        saveUninitialized: false,
+        cookie: {
+            expires: 10000, // in milli seconds
+        }
+    })
+);
 
 
 // now posting the form for signup
@@ -102,6 +119,17 @@ router.get("/productdetails/:id", async (req, res) => {
 });
 
 // login api
+
+router.get('/dashboard', function(req, res) {
+    if(req.session.user && req.cookies.user_sid) {
+        
+        res.render('dashboard/index')
+    }
+    else {
+        res.redirect("/");
+    }
+});
+
 router.post('/login',async (req,res) => {
     var email = req.body.email,
     password = req.body.password;
@@ -117,6 +145,7 @@ router.post('/login',async (req,res) => {
                 res.redirect("/");
             }
         });
+        req.session.user = user;
         res.redirect("/dashboard");
     }
         catch (error) {
@@ -151,36 +180,56 @@ router.get('/dashboard',function(req,res){
 })
 
 router.get('/add-product',function(req,res){
-    res.render('dashboard/add-product');
+    if(req.session.user && req.cookies.user_sid) {
+        res.render('dashboard/add-product');
+    }
+    else {
+        res.redirect("/");
+    }
 })
 
 router.get('/view-product', async (req,res) => {
-    try {
-        const regdata = await addproduct.find({});
-        res.render('dashboard/view-product', {regdata: regdata});
-        console.log(regdata);
-    }catch (err) {
-        console.log(err);
+    if(req.session.user && req.cookies.user_sid) {
+        try {
+            const regdata = await addproduct.find({});
+            res.render('dashboard/view-product', {regdata: regdata});
+            console.log(regdata);
+        }catch (err) {
+            console.log(err);
+        }
+    }
+    else {
+        res.redirect("/");
     }
 });
 
 router.get('/view-registration', async (req,res) => {
-    try {
-        const regdata = await signup.find({});
-        res.render('dashboard/view-registration', {regdata: regdata});
-        console.log(regdata);
-    }catch (err) {
-        console.log(err);
+    if(req.session.user && req.cookies.user_sid) {
+        try {
+            const regdata = await signup.find({});
+            res.render('dashboard/view-registration', {regdata: regdata});
+            console.log(regdata);
+        }catch (err) {
+            console.log(err);
+        }
+    }
+    else {
+        res.redirect("/");
     }
 });
 
 router.get('/view-contact', async (req,res) => {
-    try {
-        const regdata = await contact.find({});
-        res.render('dashboard/view-contact', {regdata: regdata});
-        console.log(regdata);
-    }catch (err) {
-        console.log(err);
+    if(req.session.user && req.cookies.user_sid) {
+        try {
+            const regdata = await contact.find({});
+            res.render('dashboard/view-contact', {regdata: regdata});
+            console.log(regdata);
+        }catch (err) {
+            console.log(err);
+        }
+    }
+    else {
+        res.redirect("/");
     }
 });
 
@@ -299,6 +348,16 @@ router.post('/update_registrations/:id', async (req, res) => {
         res.redirect('/view-registration');
     } catch (err) {
         res.status(500).json({ message: 'Server error' });
+    }
+});
+
+// logout api
+router.get("/logout", (req,res) => {
+    if (req.session.user && req.cookies.user_sid) {
+        res.clearCookie("user_sid");
+        res.redirect("/");
+    } else {
+        res.redirect("/");
     }
 });
 
